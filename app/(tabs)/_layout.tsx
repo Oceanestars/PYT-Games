@@ -28,9 +28,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="connection"
+        name="connections"
         options={{
-          title: "Connection",
+          title: "Connections",
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
               name={focused ? "game-controller" : "game-controller-outline"}
