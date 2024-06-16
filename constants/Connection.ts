@@ -1,2 +1,6 @@
-export const wordList = ["pamplemousse", "princess", "waffle", "cereal", "pickle", "men", "pretzel","vinegar", "pasteque","lemon", "tangerine", "guava", "pasta", "sushi", "falafel", "pavlova"];
-export const categories = ["Patricia's Dogs", "Patricia's Hatred", "Patricia's Lacroix", "Patricia's fav Food"]
+export const answer = {
+    "Patricia's Dogs": ["pamplemousse", "princess", "waffle", "pretzel"],
+    "Patricia's Hatred": ["cereal", "pickle", "men", "vinegar"],
+    "Patricia's Lacroix": ["pasteque", "lemon", "tangerine", "guava"],
+    "Patricia's fav Food": ["pasta", "sushi", "falafel", "pavlova"],
+  };

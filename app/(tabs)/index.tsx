@@ -27,7 +27,7 @@ export default function HomeScreen() {
         <ThemedText>
           To ge this party started, we have some Patricia Themed NYT games.
         </ThemedText>
-        <Collapsible title="Connection Rules">
+        <Collapsible title="Connections Rules">
           <ThemedText>
             The Connections Game is a daily challenge where players identify
             links between words. In the Connections Wordle version, the goal is
