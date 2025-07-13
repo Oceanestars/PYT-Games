@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 7,
     borderRadius: 5,
     elevation: 3,
-    width: "50%",
+    width: "35%",
     height: 40,
     margin: "auto",
   },

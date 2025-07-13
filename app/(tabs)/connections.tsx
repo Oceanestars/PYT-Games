@@ -45,14 +45,15 @@ export default function Connection() {
     });
   };
 
-  const submitButtonPress = (wordSelected: Record<string, Boolean>) => {
-    const currentAnswer = Object.keys(wordSelected).filter(
-      (key) => wordSelected[key] === true
+  const submitButtonPress = (wordsSelected: Record<string, Boolean>) => {
+    const currentAnswer = Object.keys(wordsSelected).filter(
+      (key) => wordsSelected[key] === true
     );
     if (currentAnswer.length == 4) {
       const correctCategory = findMatchingArray(answer, currentAnswer);
       console.log("Selected: ", currentAnswer);
       if (correctCategory == null) {
+        // TODO; Update to be a temp modal
         console.warn("Damn do you even know Pat?");
         setCorrectAnswer(null);
       } else {
@@ -70,6 +71,11 @@ export default function Connection() {
       return;
     }
     return;
+  };
+
+  const clearButtonPress = () => {
+    console.log("clear selected choices");
+    setPressedButtons({});
   };
 
   return (
@@ -109,11 +115,18 @@ export default function Connection() {
           <></>
         )}
       </ThemedView>
-      <Button
-        title={"Submit"}
-        styleClass={styles.submitButton}
-        onPress={() => submitButtonPress(pressedButtons)}
-      />
+      <ThemedView style={{ flexDirection: "row" }}>
+        <Button
+          title={"Submit"}
+          styleClass={styles.submitButton}
+          onPress={() => submitButtonPress(pressedButtons)}
+        />
+        <Button
+          title={"Clear"}
+          styleClass={styles.submitButton}
+          onPress={() => clearButtonPress()}
+        />
+      </ThemedView>
     </ParallaxScrollView>
   );
 }
